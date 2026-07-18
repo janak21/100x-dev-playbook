@@ -1,6 +1,10 @@
 ---
 name: 100x-dev
 description: A disciplined operating system for building software with AI — spec-driven development, plan interrogation, small verified steps, anti-slop review gates, debugging protocol, and evals. Use this skill whenever the user wants to build, create, or ship any software (app, website, tool, script, feature, prototype, MVP), start a new project, plan a feature, fix or debug code that isn't working, review AI-generated code, or asks to "vibe code" something. Also use when the user expresses frustration that AI output is low quality, broken, or "slop", or when a project is drifting and iterations aren't converging. Trigger even if the user doesn't name a methodology — this skill IS the methodology.
+license: MIT
+metadata:
+  author: janak-sawale
+  version: "1.0"
 ---
 
 # 100x Dev — the operating loop

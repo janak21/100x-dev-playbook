@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "AGENTS.md (or equivalent always-on rules file) created in the project root",
+      "passed": true,
+      "evidence": "expense-tracker/AGENTS.md exists (59-line 'Working Agreement' with workflow/engineering rules) plus CLAUDE.md pointer; committed in the first commit ee9b3e1 'Project setup: rulebook, spec...'."
+    },
+    {
+      "text": "A spec document (SPEC.md) with scope and out-of-scope decisions exists and preceded implementation code",
+      "passed": true,
+      "evidence": "expense-tracker/SPEC.md contains core flows plus '## 6. Explicitly OUT of scope' (no accounts, no server, no sync, no charts). Git log: SPEC.md in first commit ee9b3e1, before logic commit fdc4caf and UI commit be876ac."
+    },
+    {
+      "text": "An implementation plan (components, choices, risks) was communicated before any code was written",
+      "passed": true,
+      "evidence": "TRANSCRIPT.md Step 3 'Phase 1: Plan (presented before any code)' covers technology choice with rejected alternatives, component/data-flow breakdown, build order, and 'The 3 riskiest parts'; code is written in Steps 4-5."
+    },
+    {
+      "text": "Git repository initialized with multiple incremental commits (not one big commit)",
+      "passed": true,
+      "evidence": "git log shows 5 commits: ee9b3e1 setup -> fdc4caf logic+tests -> be876ac UI -> c76e0ef wrap-up -> f3f2132 rename, each scoped to one working step."
+    },
+    {
+      "text": "Automated tests exist and cover at least one non-happy path (empty/invalid/hostile input)",
+      "passed": true,
+      "evidence": "expenses.test.js has 21 tests including 'rejects a completely empty submit', 'rejects bad amounts: text, negative, zero, absurd, Infinity', script-injection category, fake dates, and corrupted-storage parsing; plus smoke.mjs headless walkthrough."
+    },
+    {
+      "text": "Trade-offs, shortcuts, or known debts are explicitly confessed somewhere in the deliverables",
+      "passed": true,
+      "evidence": "TRANSCRIPT.md Step 6 'Confession (communicated unprompted)' lists 5 debts (double-click duplicate, two-tab data loss, hardcoded currency, confirm() dialog, no export); SESSION-STATE.md has a 'Known debts & trade-offs' section."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

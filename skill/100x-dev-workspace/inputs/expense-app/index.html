@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Expenses</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 40px auto; }
+    li { padding: 4px 0; }
+  </style>
+</head>
+<body>
+  <h1>My Expenses</h1>
+  <form id="expense-form">
+    <input type="text" id="desc" placeholder="Description" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <button type="submit" id="add-btn">Add Expense</button>
+  </form>
+  <ul id="expense-list"></ul>
+  <p>Total: $<span id="total">0</span></p>
+
+  <script src="app.js"></script>
+</body>
+</html>

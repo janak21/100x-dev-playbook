@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "The failure was made precise (exact trigger, expected vs observed counts) or reproduced BEFORE code was changed",
+      "passed": true,
+      "evidence": "TRANSCRIPT Step 2 (before the fix in Step 4) makes it precise: 'clicking Add Expense added the entry up to 4 times (2 click + 2 submit listeners); pressing Enter added it 2 times', explaining the 'sometimes'. Not reproduced by execution pre-fix, but the assertion's 'made precise' branch is satisfied."
+    },
+    {
+      "text": "The mechanism was identified explicitly before the fix: setup() registered twice (bare call + DOMContentLoaded) AND redundant click listener on a type=submit button",
+      "passed": true,
+      "evidence": "TRANSCRIPT Step 2 identifies both: 'setup() ran twice' (DOMContentLoaded registration + immediate call) and 'two overlapping handlers for one action' (click handler on the type=submit button plus form submit handler), before Step 4's fix."
+    },
+    {
+      "text": "Fix removes the root cause with a single event path \u2014 not a symptom patch like debouncing, flags, or deduplication",
+      "passed": true,
+      "evidence": "Fixed app.js calls setup() exactly once (DOMContentLoaded listener removed) and keeps a single form 'submit' handler; no debounce, flags, or dedup-by-content anywhere in the code."
+    },
+    {
+      "text": "All duplicate registrations are addressed (bare setup() call, DOMContentLoaded duplicate, redundant click listener)",
+      "passed": true,
+      "evidence": "app.js: DOMContentLoaded registration removed leaving one direct setup() call (end-of-body script, DOM already parsed), and the #add-btn click listener is removed; comments document both former duplicate sources."
+    },
+    {
+      "text": "A regression test exists demonstrating one action produces exactly one entry",
+      "passed": false,
+      "evidence": "Outputs contain only app.js, index.html, and TRANSCRIPT.md. Step 5 claims a Node smoke test with DOM stub was run, but no test file was preserved \u2014 no runnable regression test exists as an artifact."
+    },
+    {
+      "text": "A plain-language explanation of why the bug happened is given to the user",
+      "passed": true,
+      "evidence": "TRANSCRIPT Step 2: 'Communicated to user: Explained both root causes and why the duplicate count differed between clicking the button and pressing Enter', with the mechanism spelled out (listeners attached twice; submit button fires click then submit)."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

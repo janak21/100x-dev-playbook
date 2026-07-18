@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "ai-feature-quality",
+  "prompt": "I built a prompt that summarizes customer support emails into 3 bullet points for my team. It seems to work when I try it. How do I make sure it's actually good before my team starts relying on it? Set up whatever is needed.",
+  "assertions": [
+    "Quality is framed as a measured rate across a case set — explicitly rejects the single-trial anecdote",
+    "A case set of roughly 20 cases exists with a deliberate mix of typical, hard, and hostile cases",
+    "Pass criteria are defined per case BEFORE outputs are generated/graded",
+    "Hostile/adversarial cases include at least prompt injection and empty/misdirected input",
+    "Regression discipline prescribed: rerun the FULL set after any prompt or model change",
+    "If an LLM judge is used: it has a written rubric, blind grading, and a human spot-check/calibration requirement"
+  ]
+}

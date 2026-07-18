@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "AGENTS.md (or equivalent always-on rules file) created in the project root",
+      "passed": false,
+      "evidence": "Project directory contains only index.html and README.md; no AGENTS.md, CLAUDE.md, or equivalent rules file anywhere in outputs."
+    },
+    {
+      "text": "A spec document (SPEC.md) with scope and out-of-scope decisions exists and preceded implementation code",
+      "passed": false,
+      "evidence": "No SPEC.md or any spec document exists; deliverables are index.html, README.md, TRANSCRIPT.md only."
+    },
+    {
+      "text": "An implementation plan (components, choices, risks) was communicated before any code was written",
+      "passed": false,
+      "evidence": "TRANSCRIPT.md section 2 communicates the architecture choice and rationale (single-file HTML + localStorage) before building, but no risks were communicated pre-code; the data-loss caveats appear only in the README written after the app."
+    },
+    {
+      "text": "Git repository initialized with multiple incremental commits (not one big commit)",
+      "passed": false,
+      "evidence": "No .git directory in expense-tracker/ (git rev-parse resolves to an unrelated parent repo); transcript never mentions git. Everything was delivered without version control."
+    },
+    {
+      "text": "Automated tests exist and cover at least one non-happy path (empty/invalid/hostile input)",
+      "passed": false,
+      "evidence": "No test files exist. Verification was limited to 'node --check' syntax validation of the embedded JavaScript (TRANSCRIPT.md section 5)."
+    },
+    {
+      "text": "Trade-offs, shortcuts, or known debts are explicitly confessed somewhere in the deliverables",
+      "passed": true,
+      "evidence": "README.md 'Two things to know': data lives in one browser on one computer, and clearing browser site data can delete it (CSV export suggested as backup); transcript wrap-up also flags the currency and storage assumptions."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "pass_rate": 0.16666666666666666
+  }
+}

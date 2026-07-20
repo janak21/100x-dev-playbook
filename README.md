@@ -33,7 +33,7 @@ A 10x developer using AI beats you today not because of secret prompts, but beca
 The whole procedural side of this system is packaged as an [Agent Skills](https://agentskills.io/specification)-compliant skill in `skill/100x-dev/`. From this repo:
 
 ```bash
-npx skills add <your-github-username>/100x-dev-playbook
+npx skills add janak21/100x-dev-playbook
 ```
 
 This auto-installs into every agent it detects (`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`). The skill activates on build/plan/debug/review tasks and deploys the rulebook into each project as `AGENTS.md` automatically. Benchmarked on 3 task types with 6 process assertions each: 100% with-skill vs 67% baseline on a frontier model, and 89% vs 50% on a small model (Haiku) — a small model with this skill outperformed the frontier model without it.

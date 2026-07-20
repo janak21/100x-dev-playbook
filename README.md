@@ -28,7 +28,17 @@ A 10x developer using AI beats you today not because of secret prompts, but beca
 | `MECHANICS.md` | Twelve transformer-level facts and the tactics they imply. | Read once; reference when prompts underperform. |
 | `EVALS.md` | How to measure prompts and AI features across cases, not anecdotes. | Any prompt you reuse or feature you ship. |
 
-## How to deploy the rulebook in any tool
+## Install as a skill (fastest path)
+
+The whole procedural side of this system is packaged as an [Agent Skills](https://agentskills.io/specification)-compliant skill in `skill/100x-dev/`. From this repo:
+
+```bash
+npx skills add <your-github-username>/100x-dev-playbook
+```
+
+This auto-installs into every agent it detects (`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`). The skill activates on build/plan/debug/review tasks and deploys the rulebook into each project as `AGENTS.md` automatically. Benchmarked on 3 task types with 6 process assertions each: 100% with-skill vs 67% baseline on a frontier model, and 89% vs 50% on a small model (Haiku) — a small model with this skill outperformed the frontier model without it.
+
+## How to deploy the rulebook manually in any tool
 
 The industry standard for agent instruction files is `AGENTS.md` (Linux Foundation, supported by 28+ tools). Deployment:
 

@@ -1,0 +1,9 @@
+{
+  "participants": ["Alice", "Bob", "Chad", "Dana"],
+  "expenses": [
+    {"payer": "Alice", "amount": "60.00", "split_type": "equal", "participants": ["Bob", "Chad"]},
+    {"payer": "Bob", "amount": "45.50", "split_type": "equal", "participants": ["Chad", "Dana"]},
+    {"payer": "Chad", "amount": "33.33", "split_type": "equal", "participants": ["Alice", "Bob", "Chad", "Dana"]},
+    {"payer": "Dana", "amount": "20.01", "split_type": "shares", "shares": {"Alice": 2, "Dana": 1}}
+  ]
+}

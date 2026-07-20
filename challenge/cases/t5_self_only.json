@@ -1,0 +1,6 @@
+{
+  "participants": ["Alice"],
+  "expenses": [
+    {"payer": "Alice", "amount": "42.00", "split_type": "equal", "participants": ["Alice"]}
+  ]
+}

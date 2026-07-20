@@ -1,0 +1,9 @@
+{
+  "participants": ["Alice", "Bob"],
+  "expenses": [
+    {"payer": "Alice", "amount": "0.10", "split_type": "equal", "participants": ["Alice", "Bob"]},
+    {"payer": "Alice", "amount": "0.20", "split_type": "equal", "participants": ["Alice", "Bob"]},
+    {"payer": "Bob", "amount": "20.10", "split_type": "equal", "participants": ["Alice", "Bob"]},
+    {"payer": "Bob", "amount": "1073.95", "split_type": "percent", "percents": {"Alice": "0.01", "Bob": "99.99"}}
+  ]
+}

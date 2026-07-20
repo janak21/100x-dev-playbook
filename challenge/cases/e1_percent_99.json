@@ -1,0 +1,6 @@
+{
+  "participants": ["Alice", "Bob"],
+  "expenses": [
+    {"payer": "Alice", "amount": "50.00", "split_type": "percent", "percents": {"Alice": "50.00", "Bob": "49.00"}}
+  ]
+}

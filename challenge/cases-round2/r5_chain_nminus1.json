@@ -1,0 +1,5 @@
+{"participants":["A1","A2","A3","A4","A5"],
+ "expenses":[{"payer":"A1","amount":"10.00","split_type":"exact","amounts":{"A2":"10.00"}},
+             {"payer":"A2","amount":"20.00","split_type":"exact","amounts":{"A3":"20.00"}},
+             {"payer":"A3","amount":"30.00","split_type":"exact","amounts":{"A4":"30.00"}},
+             {"payer":"A4","amount":"40.00","split_type":"exact","amounts":{"A5":"40.00"}}]}

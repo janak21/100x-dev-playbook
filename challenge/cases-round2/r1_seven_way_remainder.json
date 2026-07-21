@@ -1,0 +1,2 @@
+{"participants":["Ana","Bob","Cy","Dee","Eve","Fay","Gus"],
+ "expenses":[{"payer":"Gus","amount":"100.00","split_type":"equal","participants":["Ana","Bob","Cy","Dee","Eve","Fay","Gus"]}]}

@@ -36,7 +36,38 @@ The whole procedural side of this system is packaged as an [Agent Skills](https:
 npx skills add janak21/100x-dev-playbook
 ```
 
-This auto-installs into every agent it detects (`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`). The skill activates on build/plan/debug/review tasks and deploys the rulebook into each project as `AGENTS.md` automatically. Benchmarked on 3 task types with 6 process assertions each: 100% with-skill vs 67% baseline on a frontier model, and 89% vs 50% on a small model (Haiku) — a small model with this skill outperformed the frontier model without it.
+This auto-installs into every agent it detects (`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`). The skill activates on build/plan/debug/review tasks and deploys the rulebook into each project as `AGENTS.md` automatically.
+
+### What the benchmarks actually show
+
+Everything below is machine-verified against a held-out harness (`challenge/`), with full
+method and raw results in `challenge/v2/RESULTS*.md`. Sample sizes are small (n=1–3 per
+configuration): directional, not conclusive.
+
+- **On a judgment-heavy task, the skill lifts a small model substantially:** 16–17/17 with
+  the skill vs 10/17 without, on an 18-point correctness harness. The entire gap was
+  judgment-shaped — fairness semantics and hostile-input handling.
+- **The bare small model shipped a catastrophic silent bug** — it inverted its sign
+  convention, instructing whoever paid to pay again — and *all 15 of its own tests passed*,
+  because they were written from the implementation and inherited the same misreading.
+- **It does NOT let a small model beat a frontier model.** An earlier round suggested it
+  did; that did not replicate under independent correctness grading (16 vs 17). The skill
+  narrows the model gap; it does not erase it.
+- **Process discipline improves regardless of model:** +2 (frontier) and +3 (small) on six
+  blind-graded assertions.
+- **Cost:** roughly +27% tokens and +50–85% wall time versus no skill. Ceremony scaling cuts
+  ~36% of that back on small tasks by skipping artifacts entirely.
+- **Resumability verified:** a fresh session, given a project it had never seen with git
+  history stripped, added a multi-currency feature with **zero regressions** (16/16 on the
+  original harness, all 78 pre-existing tests still passing).
+
+### Known limitation
+
+On tasks with a signed or directional output convention, roughly **one run in three
+inverted it** across every version tested — including runs that followed all the
+test-discipline rules. An external property check catches this immediately; the model's own
+tests reliably do not. **Check one case by hand whenever output has a sign.** v1.4 adds a
+targeted "semantic anchor test" rule for this; it is not yet validated.
 
 ## How to deploy the rulebook manually in any tool
 

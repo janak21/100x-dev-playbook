@@ -74,6 +74,9 @@ def total_paid(data):
 
 
 def main():
+    if len(sys.argv) != 4 or sys.argv[1] not in ("fairness", "conserve"):
+        print(__doc__.strip(), file=sys.stderr)
+        sys.exit(2)
     mode, inp, out = sys.argv[1], sys.argv[2], sys.argv[3]
     data, o = load(inp, out)
     bal = check_settlement(data, o)

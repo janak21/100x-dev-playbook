@@ -1,0 +1,22 @@
+[
+{"query":"i want to build a little web app to track my gym workouts, sets reps and weight, just for me. where do i start", "should_trigger": true},
+{"query":"ok so my splitfair.py keeps giving duplicate entries when i click add twice. its broken can you fix", "should_trigger": true},
+{"query":"lets vibe code a landing page for my consulting thing tonight", "should_trigger": true},
+{"query":"claude wrote me an api endpoint for /users/:id and it looks fine but i have no idea if its actually safe to ship. can you check it", "should_trigger": true},
+{"query":"every time i iterate with the ai on this project it gets worse. ive redone the auth flow 5 times and each fix breaks something else. im going in circles", "should_trigger": true},
+{"query":"need to add stripe subscriptions to my existing next.js app, users pick monthly or yearly. plan it out with me first", "should_trigger": true},
+{"query":"write me a python script that renames all the files in ~/Downloads by their created date", "should_trigger": true},
+{"query":"i have a prompt that classifies support tickets into 5 categories. how do i know if its actually good before my team uses it", "should_trigger": true},
+{"query":"starting a new side project - a tool that scrapes job postings and ranks them. help me set it up properly this time, last one turned into spaghetti", "should_trigger": true},
+{"query":"can you explain how oauth pkce actually works, im reading the rfc and im lost", "should_trigger": false},
+{"query":"whats the difference between postgres and mysql for a small saas", "should_trigger": false},
+{"query":"summarize this 40 page technical spec pdf i just uploaded into bullet points for my boss", "should_trigger": false},
+{"query":"my aws bill jumped from $40 to $380 last month, help me figure out which service is doing it", "should_trigger": false},
+{"query":"is it worth learning rust in 2026 or should i go deeper on typescript", "should_trigger": false},
+{"query":"draft a linkedin post announcing that we just shipped our v2 api", "should_trigger": false},
+{"query":"what does this error mean: ECONNREFUSED 127.0.0.1:5432", "should_trigger": false},
+{"query":"make me a spreadsheet tracking my freelance invoices with a column for paid/unpaid and totals per client", "should_trigger": false},
+{"query":"review this pull request from my contractor and tell me if the code quality is acceptable before i pay him", "should_trigger": true},
+{"query":"i need to interview 5 candidates for a backend role next week, help me build the question list", "should_trigger": false},
+{"query":"our deploy pipeline takes 22 minutes and its killing us, where do i even look to speed it up", "should_trigger": false}
+]

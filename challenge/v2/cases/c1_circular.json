@@ -1,0 +1,5 @@
+{"participants":["Ann","Bea","Cal","Dan"],
+"expenses":[{"payer":"Ann","amount":"60.00","split_type":"equal","participants":["Bea","Cal"]},
+{"payer":"Bea","amount":"45.50","split_type":"equal","participants":["Cal","Dan"]},
+{"payer":"Cal","amount":"33.33","split_type":"equal","participants":["Ann","Bea","Cal","Dan"]},
+{"payer":"Dan","amount":"20.01","split_type":"shares","shares":{"Ann":2,"Dan":1}}]}

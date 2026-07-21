@@ -38,7 +38,14 @@ Ask the AI directly, per the Red-Team pattern, plus verify:
 - [ ] You can explain every change: what, why this way, what breaks it. If not → Explanation Extraction (PROMPT-PATTERNS.md #5) until you can.
 - [ ] Trade-offs confessed and recorded (Confession pattern #6) — either fixed or written into SESSION-STATE.md as known debt.
 
-## Gate 7 — Housekeeping
+## Gate 7 — Proportionality (the bloat gate)
+- [ ] Markdown/prose line count does NOT exceed source line count. If it does, delete.
+- [ ] No file that mostly repeats another (duplicate rules files, redundant summaries, index files).
+- [ ] No self-congratulatory content: compliance tables, self-graded checklists, "production-ready" claims.
+- [ ] Every abstraction is used more than once; no class or layer that exists only for tidiness.
+- [ ] The confession list names locations and consequences, not generic limitations.
+
+## Gate 8 — Housekeeping
 - [ ] Committed with a message that says why, not just what.
 - [ ] SPEC.md decision log updated if any decision was made.
 - [ ] New vocabulary → GLOSSARY.md.
